@@ -23,6 +23,7 @@ namespace BadCase
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddResponseCompression(o => o.EnableForHttps = true);
             services.AddControllersWithViews();
         }
 
@@ -42,6 +43,7 @@ namespace BadCase
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseResponseCompression();
             app.UseRouting();
 
             app.UseAuthorization();

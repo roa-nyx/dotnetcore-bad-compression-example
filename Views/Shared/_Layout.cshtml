@@ -1,48 +1,194 @@
-﻿<!DOCTYPE html>
+@{IgnoreBody();}<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BadCase</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+	<meta charset="UTF-8">
+	<title> - Klick CM</title>
+	<link rel="icon" type="image/png" href="/favicon.ico">
+	<link rel="stylesheet" href="/vendor/bootstrap-4.5.3/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/essentials-icon-compilation/flaticon.css">
+	<link rel="stylesheet" type="text/css" href="/lib/bootstrap-submenus/bs-sub.css">
+	<link rel="stylesheet" type="text/css" href="/bundles/site.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BadCase</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+<body data-current-user-email="bgall@klick.com" data-current-user-mode="admin" data-current-user-prefs="{&quot;hidePathGroupNodes&quot;:true,&quot;autoOpenOnlyNode&quot;:true,&quot;removeLoneGroupingNodes&quot;:true,&quot;simplifyPathedCostcenterName&quot;:false,&quot;showIntermediaryColumnAggregates&quot;:false,&quot;schema&quot;:&quot;Owner (CST)&quot;}" data-server-state="{}" data-impersonated="f">
+	<nav class="navbar sitenav navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand js-mithril-history-ignore" href="/"><span id="last-solid-data" title="Data accurate until Apr, 2021">APR, 2021</span>CM 2.2.1<span id="server-indicators"></span></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown js-reports-menu reports-menu"></li>
+			</ul>
+			<ul class="navbar-nav navbar-tool-buttons">
+				<li class="nav-item d-none">
+					<a class="edit-link js-edit-link btn btn-warning btn-sm" href="javascript:void 0"><i class="flaticon-edit"></i></a>
+				</li>
+				<li class="nav-item d-none">
+					<a class="data-link js-data-link btn btn-success btn-sm" href="javascript:void 0"><i class="flaticon-play-button-1"></i></a>
+				</li>
+				<li class="nav-item d-none">
+					<a class="export-link js-export-link btn btn-success btn-sm" href="javascript:void 0"><i class="flaticon-folder-15"></i></a>
+				</li>
+				<li class="nav-item d-none">
+					<span class="js-nav-loader oc-loader"></span>
+				</li>
+			</ul>
+			<ul class="navbar-nav navbar-right ml-auto">
+				<li class="dropdown js-db-schema-selector">
+					<a href="javascript:void 0" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="flaticon-lock-1"></span>&nbsp; <span class="selected-schema-name">Schemas</span> <span class="caret"></span></a>
+					<div class="dropdown-menu dropdown-menu-right">
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Activation (2018&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-1" role="button" aria-expanded="false" aria-controls="submenu-1">Analytics</a>
+<div class="collapse" id="submenu-1">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental" data-name="Analytics">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Analytics (2018&#x2B;)</a>
+</div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - BadCase - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">App Sci</a>
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-4" role="button" aria-expanded="false" aria-controls="submenu-4">Brave</a>
+<div class="collapse" id="submenu-4">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Brave">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Brave (Consulting)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Client Services</a>
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-7" role="button" aria-expanded="false" aria-controls="submenu-7">Creative</a>
+<div class="collapse" id="submenu-7">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental" data-name="Creative">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Creative (2018&#x2B;)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">CSTs (Limited)</a>
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-10" role="button" aria-expanded="false" aria-controls="submenu-10">Edge</a>
+<div class="collapse" id="submenu-10">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Edge">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">Edge (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-12" role="button" aria-expanded="false" aria-controls="submenu-12">Epic</a>
+<div class="collapse" id="submenu-12">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Epic">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">Epic (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-14" role="button" aria-expanded="false" aria-controls="submenu-14">Katalyst</a>
+<div class="collapse" id="submenu-14">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Katalyst">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">Katalyst (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-16" role="button" aria-expanded="false" aria-controls="submenu-16">Klick Health</a>
+<div class="collapse" id="submenu-16">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Klick Health">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Klick Health (2019&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Klick Health (Departmental)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Breakdown (CST)">Klick Health (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-20" role="button" aria-expanded="false" aria-controls="submenu-20">Klick Health&#x2B;</a>
+<div class="collapse" id="submenu-20">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Klick Health&#x2B;">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Klick Health&#x2B; (Departmental)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="EBITA (CST)">Klick Health&#x2B; (EBITA (CST))</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Klick Inc</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Marketing</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Media</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Medical</a>
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-27" role="button" aria-expanded="false" aria-controls="submenu-27">Nova</a>
+<div class="collapse" id="submenu-27">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Nova">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">Nova (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-29" role="button" aria-expanded="false" aria-controls="submenu-29">Overheads</a>
+<div class="collapse" id="submenu-29">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Overheads">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Culture 2017&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Culture)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Facilities 2017&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Facilities)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Genome 2018&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Genome)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Office Tech 2017&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Office Tech)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (People Practices 2017&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (People Practices)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Recruiting 2017&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Recruiting)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Travel 2017&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Overheads (Travel)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-44" role="button" aria-expanded="false" aria-controls="submenu-44">Owner</a>
+<div class="collapse" id="submenu-44">
+	<a href="javascript:void 0" class="dropdown-item" data-preferred="1" data-transform-group="Owner (CST)">Owner (CST)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="EBITA (CST)">Owner (EBITA)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Planning</a>
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-48" role="button" aria-expanded="false" aria-controls="submenu-48">PMO</a>
+<div class="collapse" id="submenu-48">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental" data-name="PMO">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">PMO (2018&#x2B;)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Policy Advocacy</a>
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-51" role="button" aria-expanded="false" aria-controls="submenu-51">Quest</a>
+<div class="collapse" id="submenu-51">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Quest">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">Quest (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-53" role="button" aria-expanded="false" aria-controls="submenu-53">Rev</a>
+<div class="collapse" id="submenu-53">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Rev">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">Rev (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-55" role="button" aria-expanded="false" aria-controls="submenu-55">Sales</a>
+<div class="collapse" id="submenu-55">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Sales">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Sales (2018&#x2B;)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-57" role="button" aria-expanded="false" aria-controls="submenu-57">Spark</a>
+<div class="collapse" id="submenu-57">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Spark">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST">Spark (2019&#x2B;)</a>
+	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">Spark (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-60" role="button" aria-expanded="false" aria-controls="submenu-60">Strategy</a>
+<div class="collapse" id="submenu-60">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental" data-name="Strategy">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Strategy (2018&#x2B;)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-62" role="button" aria-expanded="false" aria-controls="submenu-62">Team Takeda</a>
+<div class="collapse" id="submenu-62">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="CST" data-name="Team Takeda">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Margin Profit Breakdown (CST)">Team Takeda (Limited)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-64" role="button" aria-expanded="false" aria-controls="submenu-64">Technology</a>
+<div class="collapse" id="submenu-64">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental" data-name="Technology">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">Technology (2018&#x2B;)</a>
+</div>
+
+	<a href="javascript:void 0" class="dropdown-item cm-collapse-trigger" data-toggle="collapse" data-target="#submenu-66" role="button" aria-expanded="false" aria-controls="submenu-66">User Experience</a>
+<div class="collapse" id="submenu-66">
+<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental" data-name="User Experience">Base</a>	<a href="javascript:void 0" class="dropdown-item" data-transform-group="Departmental">User Experience (2018&#x2B;)</a>
+</div>
+
+</div>
+
+				</li>
+				<li class="nav-item dropdown">
+					<a href="javascript:void 0" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="flaticon-user-3"></span>&nbsp; Barak Gall <span class="caret"></span></a>
+					<div class="dropdown-menu dropdown-menu-right">
+							<form class="dropdown-item impersonation-wrapper js-impersonation-wrapper"></form>
+								<a href="/status" class="dropdown-item"><span class="flaticon-like-2"></span> Site Status</a>
+								<a href="javascript:void 0" class="dropdown-item js-analytics-dashboard-link"><span class="flaticon-stopwatch-3"></span> Analytics</a>
+								<a href="javascript:void 0" class="dropdown-item js-analytics-link"><span class="flaticon-database"></span> Events</a>
+							<a href="javascript:void 0" class="dropdown-item js-settings-link"><span class="flaticon-settings-5"></span> Settings</a>
+						<a href="/logout" class="dropdown-item js-mithril-history-ignore"><span class="flaticon-exit"></span> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="notifications-container"></div>
+	<div class="container-fluid" id="page-content"></div>
+	<div id="modalcontainer" class="modal fade" tabindex="-1" role="dialog"></div>
+	<script src="/vendor/mithril-1.1.7.min.js"></script>
+	<script src="/vendor/jquery-3.4.1.min.js"></script>
+	<script src="/vendor/bootstrap-4.5.3/js/bootstrap.bundle.min.js"></script>
+	<script src="/lib/bootstrap-submenus/bs-sub.js"></script>
+	<script src="/bundles/site.js"></script>
 </body>
 </html>
